@@ -14516,3 +14516,71 @@ UNION (SELECT OrdersFiles.id AS `OrdersFiles__id`, OrdersFiles.order_id AS `Orde
 2020-11-23 04:50:10 Debug: duration=0 rows=1 SELECT (COUNT(*)) AS `count` FROM apropos Apropos
 2020-11-23 04:50:37 Debug: duration=1 rows=0 SELECT Apropos.id AS `Apropos__id` FROM apropos Apropos LIMIT 20 OFFSET 0
 2020-11-23 04:50:37 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM apropos Apropos
+2020-11-23 07:04:33 Debug: duration=13 rows=9 SHOW FULL COLUMNS FROM `orders`
+2020-11-23 07:04:33 Debug: duration=6 rows=4 SHOW INDEXES FROM `orders`
+2020-11-23 07:04:33 Debug: duration=75 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'facture_et_paiement' AND kcu.TABLE_NAME = 'orders' AND rc.TABLE_NAME = 'orders'
+2020-11-23 07:04:33 Debug: duration=4 rows=1 SHOW TABLE STATUS WHERE Name = 'orders'
+2020-11-23 07:04:33 Debug: duration=5 rows=6 SHOW FULL COLUMNS FROM `users`
+2020-11-23 07:04:33 Debug: duration=5 rows=2 SHOW INDEXES FROM `users`
+2020-11-23 07:04:33 Debug: duration=39 rows=1 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'facture_et_paiement' AND kcu.TABLE_NAME = 'users' AND rc.TABLE_NAME = 'users'
+2020-11-23 07:04:33 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'users'
+2020-11-23 07:04:33 Debug: duration=3 rows=4 SHOW FULL COLUMNS FROM `tags`
+2020-11-23 07:04:33 Debug: duration=3 rows=2 SHOW INDEXES FROM `tags`
+2020-11-23 07:04:33 Debug: duration=27 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'facture_et_paiement' AND kcu.TABLE_NAME = 'tags' AND rc.TABLE_NAME = 'tags'
+2020-11-23 07:04:33 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'tags'
+2020-11-23 07:04:33 Debug: duration=3 rows=6 SHOW FULL COLUMNS FROM `files`
+2020-11-23 07:04:33 Debug: duration=3 rows=1 SHOW INDEXES FROM `files`
+2020-11-23 07:04:33 Debug: duration=30 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'facture_et_paiement' AND kcu.TABLE_NAME = 'files' AND rc.TABLE_NAME = 'files'
+2020-11-23 07:04:33 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'files'
+2020-11-23 07:04:33 Debug: duration=3 rows=1 SELECT Orders.id AS `Orders__id`, Orders.user_id AS `Orders__user_id`, Orders.subsubject_id AS `Orders__subsubject_id`, Orders.title AS `Orders__title`, Orders.slug AS `Orders__slug`, Orders.body AS `Orders__body`, Orders.published AS `Orders__published`, Orders.created AS `Orders__created`, Orders.modified AS `Orders__modified`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM orders Orders INNER JOIN users Users ON Users.id = (Orders.user_id) LIMIT 20 OFFSET 0
+2020-11-23 07:04:33 Debug: duration=6 rows=2 SHOW FULL COLUMNS FROM `orders_tags`
+2020-11-23 07:04:33 Debug: duration=3 rows=3 SHOW INDEXES FROM `orders_tags`
+2020-11-23 07:04:34 Debug: duration=28 rows=2 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'facture_et_paiement' AND kcu.TABLE_NAME = 'orders_tags' AND rc.TABLE_NAME = 'orders_tags'
+2020-11-23 07:04:34 Debug: duration=5 rows=1 SHOW TABLE STATUS WHERE Name = 'orders_tags'
+2020-11-23 07:04:34 Debug: duration=2 rows=1 SELECT OrdersTags.order_id AS `Tags_CJoin__order_id`, OrdersTags.tag_id AS `Tags_CJoin__tag_id`, Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified` FROM tags Tags INNER JOIN orders_tags OrdersTags ON Tags.id = (OrdersTags.tag_id) WHERE OrdersTags.order_id in (18)
+2020-11-23 07:04:34 Debug: duration=6 rows=3 SHOW FULL COLUMNS FROM `orders_files`
+2020-11-23 07:04:34 Debug: duration=4 rows=3 SHOW INDEXES FROM `orders_files`
+2020-11-23 07:04:34 Debug: duration=29 rows=0 SELECT * FROM information_schema.key_column_usage AS kcu
+            INNER JOIN information_schema.referential_constraints AS rc
+            ON (
+                kcu.CONSTRAINT_NAME = rc.CONSTRAINT_NAME
+                AND kcu.CONSTRAINT_SCHEMA = rc.CONSTRAINT_SCHEMA
+            )
+            WHERE kcu.TABLE_SCHEMA = 'facture_et_paiement' AND kcu.TABLE_NAME = 'orders_files' AND rc.TABLE_NAME = 'orders_files'
+2020-11-23 07:04:34 Debug: duration=3 rows=1 SHOW TABLE STATUS WHERE Name = 'orders_files'
+2020-11-23 07:04:34 Debug: duration=2 rows=1 SELECT OrdersFiles.id AS `Files_CJoin__id`, OrdersFiles.order_id AS `Files_CJoin__order_id`, OrdersFiles.file_id AS `Files_CJoin__file_id`, Files.id AS `Files__id`, Files.name AS `Files__name`, Files.path AS `Files__path`, Files.created AS `Files__created`, Files.modified AS `Files__modified`, Files.status AS `Files__status` FROM files Files INNER JOIN orders_files OrdersFiles ON Files.id = (OrdersFiles.file_id) WHERE OrdersFiles.order_id in (18)
+2020-11-23 07:04:34 Debug: duration=2 rows=1 SELECT (COUNT(*)) AS `count` FROM orders Orders INNER JOIN users Users ON Users.id = (Orders.user_id)
+2020-11-23 07:04:35 Debug: duration=2 rows=1 SELECT Orders.id AS `Orders__id`, Orders.user_id AS `Orders__user_id`, Orders.subsubject_id AS `Orders__subsubject_id`, Orders.title AS `Orders__title`, Orders.slug AS `Orders__slug`, Orders.body AS `Orders__body`, Orders.published AS `Orders__published`, Orders.created AS `Orders__created`, Orders.modified AS `Orders__modified`, Users.id AS `Users__id`, Users.role_id AS `Users__role_id`, Users.email AS `Users__email`, Users.password AS `Users__password`, Users.created AS `Users__created`, Users.modified AS `Users__modified` FROM orders Orders INNER JOIN users Users ON Users.id = (Orders.user_id) LIMIT 20 OFFSET 0
+2020-11-23 07:04:35 Debug: duration=3 rows=1 SELECT OrdersTags.order_id AS `Tags_CJoin__order_id`, OrdersTags.tag_id AS `Tags_CJoin__tag_id`, Tags.id AS `Tags__id`, Tags.title AS `Tags__title`, Tags.created AS `Tags__created`, Tags.modified AS `Tags__modified` FROM tags Tags INNER JOIN orders_tags OrdersTags ON Tags.id = (OrdersTags.tag_id) WHERE OrdersTags.order_id in (18)
+2020-11-23 07:04:35 Debug: duration=1 rows=1 SELECT OrdersFiles.id AS `Files_CJoin__id`, OrdersFiles.order_id AS `Files_CJoin__order_id`, OrdersFiles.file_id AS `Files_CJoin__file_id`, Files.id AS `Files__id`, Files.name AS `Files__name`, Files.path AS `Files__path`, Files.created AS `Files__created`, Files.modified AS `Files__modified`, Files.status AS `Files__status` FROM files Files INNER JOIN orders_files OrdersFiles ON Files.id = (OrdersFiles.file_id) WHERE OrdersFiles.order_id in (18)
+2020-11-23 07:04:35 Debug: duration=1 rows=1 SELECT (COUNT(*)) AS `count` FROM orders Orders INNER JOIN users Users ON Users.id = (Orders.user_id)

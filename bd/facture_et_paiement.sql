@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le :  lun. 23 nov. 2020 à 03:16
+-- Généré le :  lun. 23 nov. 2020 à 07:07
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.11
 
@@ -112,31 +112,6 @@ CREATE TABLE `i18n` (
   `field` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Déchargement des données de la table `i18n`
---
-
-INSERT INTO `i18n` (`id`, `locale`, `model`, `foreign_key`, `field`, `content`) VALUES
-(5, 'fr_CA', 'Products', 1, 'name', 'Moi fr_CA'),
-(6, 'fr_CA', 'Products', 1, 'product', 'Félicitations pour le premier order! fr_CA'),
-(7, 'fr_CA', 'Orders', 1, 'title', 'Premier order fr_CA'),
-(8, 'fr_CA', 'Orders', 1, 'body', 'Voici le premier order fr_CA'),
-(9, 'fr_CA', 'Products', 2, 'name', 'Toi fr_CA'),
-(10, 'fr_CA', 'Products', 2, 'product', 'Ton productaire fr_CA'),
-(11, 'fr_CA', 'Orders', 2, 'title', 'Essai de slug'),
-(12, 'fr_CA', 'Orders', 2, 'body', 'Voici un order pour tester le slug'),
-(13, 'fr_CA', 'Orders', 4, 'title', 'Titre plus long'),
-(14, 'fr_CA', 'Orders', 4, 'body', 'Un order plus long est accepté'),
-(15, 'fr_CA', 'Tags', 1, 'title', 'Éducation'),
-(16, 'fr_CA', 'Tags', 2, 'title', 'Ville de Laval'),
-(17, 'fr_CA', 'Tags', 3, 'title', 'International'),
-(18, 'fr_CA', 'Orders', 5, 'title', 'Tout sur Wikipedia'),
-(19, 'fr_CA', 'Orders', 6, 'title', 'Tout sur Montmorency'),
-(20, 'fr_CA', 'Orders', 7, 'title', 'Tout sur CakePHP'),
-(21, 'fr_CA', 'Orders', 5, 'body', 'Tout ce que vous avez toujours voulu savoir sur Wikipedia'),
-(22, 'fr_CA', 'Orders', 6, 'body', 'Tout ce que vous avez toujours voulu savoir sur le collège Montmorency'),
-(23, 'fr_CA', 'Orders', 7, 'body', 'Tout ce que vous avez toujours voulu savoir sur CakePHP');
 
 -- --------------------------------------------------------
 
