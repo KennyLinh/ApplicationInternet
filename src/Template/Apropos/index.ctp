@@ -71,6 +71,7 @@
             <h4>POUR PLUS DE DÉTAIL</h4>
             <p>Appuyez <a href="img/facture_et_paiement.pdf" target="_blank">ici</a> pour voir le schéma detaillé de la base de données.</p>
             <p>Appuyez <a href="http://www.databaseanswers.org/data_models/invoices_and_payments/index.htm" target="_blank">ici</a> pour voir le diagramme original de la base de données.</p>
+            <p>Appuyez <a href="https://github.com/KennyLinh/ApplicationInternet" target="_blank">ici</a> pour acceder au github du projet fait par Kenny Linh.</p>
             <a href="index.php">Retour</a>
        </div>
     </body>
